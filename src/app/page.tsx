@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import TypewriterComponent from "typewriter-effect";
 import ThemeToggle from "../components/ThemeToggle";
 
@@ -7,7 +8,10 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-background text-foreground">
       <ThemeToggle />
-      <div className="w-8 p-5 h-8 bg-white fixed top-4 right-4 rounded-full flex items-center justify-center text-white font-bold text-sm hover:bg-yellow-300 transition-colors cursor-pointer">
+      <Link
+        href={"mailto:Info@chmd.ir"}
+        className="w-8 p-5 h-8 bg-white fixed top-4 right-4 rounded-full flex items-center justify-center text-white font-bold text-sm hover:bg-yellow-300 transition-colors cursor-pointer"
+      >
         <span className="text-xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +66,7 @@ const Home = () => {
             </g>
           </svg>
         </span>
-      </div>
+      </Link>
       <div className="w-full flex flex-col items-center justify-center gap-6 text-4xl md:text-6xl lg:text-8xl">
         <div className=" w-11/12 md:w-1/2 py-2 border-b-3 flex items-center justify-center border-black dark:border-white">
           <TypewriterComponent
