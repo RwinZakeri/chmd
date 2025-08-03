@@ -5,6 +5,46 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: "LFS-Regular";
+  src: url("/fonts/LFS-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "LFS-Regular";
+  src: url("/fonts/LFS-Regular.eot") format("eot");
+}
+
+@font-face {
+  font-family: "LFS-Regular";
+  src: url("/fonts/LFS-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "LFS-Regular";
+  src: url("/fonts/LFS-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iranyekan";
+  src: url("/fonts/IRANYekanWeb.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iranyekan";
+  src: url("/fonts/IRANYekanWeb.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "iranyekan";
+  src: url("/fonts/IRANYekanWeb.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "iranyekan";
+  src: url("/fonts/IRANYekanWeb.eot") format("eot");
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,8 +52,18 @@
   --font-mono: var(--font-geist-mono);
 }
 
+.light {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light):not(.dark) {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
@@ -22,5 +72,15 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "LFS-Regular", "iranyekan", Arial, Helvetica, sans-serif;
+}
+
+span {
+  font-size: 4rem !important;
+}
+
+@media (max-width: 1200px) {
+  span {
+    font-size: 2.5rem !important;
+  }
 }
